@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Voter behaviour 17th general elections</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets_2/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets_2/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Voter behaviour 17th general elections</h1>
+								<p>
+									This is epic cool stuff, we wanted to predict results of voter elections before they were declared and we did extreme NLP to get to know the results, with <b>RBI chair professor.</b>
+								</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#full">Read full</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="full">
+								
+								
+								<p>This is epic cool stuff, we wanted to predict results of voter elections before they were declared and we did extreme NLP to get to know the results, with RBI chair professor.
+
+And of course with StanfordNLP you get access to do it for hindi too. Why Hindi? Because the analysis was done on voter comments on policies, we classified first the voter comments based on issues after tokenization, then did sentiment analysis and then applied deep NLP over gigabytes of review data, ultimately weighing it with votes of the constituencies, that is since the constituencies themselves have a fixed number of seats to be sent to the Lok Sabha (Indian legislative organ that forms the government at the center) we weighted them in the ratio of seats that the state contributes to know people's opinions on the issue vis a vis their tendency. First the tendency is measured by assigning a score from 0 to 1 on a left vs right agenda, if it is let us say 0.1, the voter has a left leaning stance and hence would likely vote for a leftist party. Then it is scored to get the voter's tendency for the current government's rule, which is decided by whether there is an active expression of positive or negative comments. Then based on experiments done at a small scale on regional ward level elections a prediction is then made on the test data set, that is the one for the general elections. The sampling was completely random since comments were collected from newspapers and feedbacks on news channels (the bias is removed by balancing with equal number of left leaning and right t leaning, and equal number of incumbent and opposition favouring sources). The results were ofcourse prone to errors for the random sampling in the channels could not be controlled by the experimenters. Then the funny thing happened, can I use it also on transcripts of news readers? that is this can also be used to highlight the effect of the news channel's convincing power to sway its audience. Can it be used for that? Haha, let us see. Again being a proprietary project, only the method can be discussed in detail and some snippets of code transferred  to local machine are all that is left.
+
+
+								
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_1.png" alt="" /></span>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_2.png" alt="" /></span>
+									<figcaption>Dictionary based approach </figcaption>
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_3.png" alt="" /></span>
+									<figcaption>Naive bayes classifier</figcaption>
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_4.png" alt="" /></span>
+									<figcaption>Naive bayes classifier</figcaption>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_4.png" alt="" /></span>
+									<figcaption>Naive bayes steps</figcaption>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_5.png" alt="" /></span>
+									<figcaption>SVMs</figcaption>
+									
+								</figure>
+								
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_6.png" alt="" /></span>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_7.png" alt="" /></span>
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_8.png" alt="" /></span>
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_9.png" alt="" /></span>
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_10.png" alt="" /></span>
+									
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_11.png" alt="" /></span>
+									<figcaption>Hindi sentiment analysis on voter reviews of policies</figcaption>
+									
+								</figure>
+								<p>
+									Introduce a recurrent convolutional neural network (RCNN) for text classification to get policy topic from the review.In this model, when learning word representations, a recurrent structure is applied to capture contextual information, which will considerably reduce noise. The max-pooling layer judges which words play key roles in text classification to capture the key components in the text automatically. Unlike the traditional CNN method, it uses a bi-directional recurrent structure instead of a fixed window size for filtering
+
+Decision Tree, Naïve Bayes, KNN, SVM with linear kernel, and boosting were investigated. The SVM based classifier with the normalized term frequency feature representation performs best on bill titles with 75% accuracy.
+								</p>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_12.png" alt="" /></span>
+									<figcaption>SVM architecture</figcaption>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_13.png" alt="" /></span>
+									<figcaption>Topic detection from voter review. Policy topics and number of test voter reviews</figcaption>
+									
+								</figure>
+									
+									
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_14.png" alt="" /></span>
+									<figcaption>Classification on policy accuracy with and without random topics</figcaption>
+									
+								</figure>
+								<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/9_15.png" alt="" /></span>
+									<figcaption>Accuracy across topics</figcaption>
+									
+								</figure>
+								</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="mailto:srijan.0598@gmail.com">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+								
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets_2/js/jquery.min.js"></script>
+			<script src="assets_2/js/browser.min.js"></script>
+			<script src="assets_2/js/breakpoints.min.js"></script>
+			<script src="assets_2/js/util.js"></script>
+			<script src="assets_2/js/main.js"></script>
+
+	</body>
+</html>

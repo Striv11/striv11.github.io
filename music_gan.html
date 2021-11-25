@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Neural style transfer on music</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets_2/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets_2/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Neural style transfer on music</h1>
+								<p>TInspired by the success of neural transfers on art the first thing my mind thought was this is superb! Now I am going to make AI learn music. I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and it is simple 
+
+All it requires is a little tuning with librosa</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#full">Read full</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="full">
+								
+								
+								<p>Inspired by the success of neural transfers on art the first thing my mind thought was this is superb! Now I am going to make AI learn music. I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and it is simple 
+
+All it requires is a little tuning with librosa</p>
+								<iframe width="420" height="315"src="https://www.youtube.com/embed/s0vhgErpAhU">
+									
+								</iframe>
+														
+								<p>Here is the sherlock theme song (copyrights with BBC) playing and AI in the background trying to learn to play flute using tensorflow. The computing power provided was lower and even on GPU training for 2 days, we could not make deep learning crystal clear. So the best thing it captures is an essence of the song where it learns with the pauses, though there is a lag!</p>
+								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_1.png" alt="" /></span>
+								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_2.png" alt="" /></span>
+								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_3.png" alt="" /></span>
+								<p>Librosa can read those spectrums and generate those plots, our job is simply to minimise errors generated and make the neural network learn, by passing the original sound through filters. The net is a relu activated 2d convolution neural network where loss is minimised using weights attached to both the content where the style has to be transferred and the style that has to be learnt, in this case a flute. The weighted sample can then be normalized with the number of samples. 
+
+Playing around with weights can help in better tuning and adding more filters may help increase in better audio quality too.</p>
+								</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="mailto:srijan.0598@gmail.com">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+								
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets_2/js/jquery.min.js"></script>
+			<script src="assets_2/js/browser.min.js"></script>
+			<script src="assets_2/js/breakpoints.min.js"></script>
+			<script src="assets_2/js/util.js"></script>
+			<script src="assets_2/js/main.js"></script>
+
+	</body>
+</html>
