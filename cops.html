@@ -24,7 +24,7 @@ Autonomous vehicles as traffic cops</title>
 								<h1>	
 Autonomous vehicles as traffic cops</h1>
 								<p>
-In the future we know autonomous vehicles will be ubiquitous, we wanted to explore if autonomous vehicles can be used as control centers in a mixed traffic with both human driven and autonomous vehicles. I know humans arent the best of drivers but AVs? We developed a method to stabilise traffic flow no matter what perturbations are caused by human idiosyncrasies :)
+In the future we know autonomous vehicles will be ubiquitous, we wanted to explore if autonomous vehicles can be used as control centers in a mixed traffic with both human driven and autonomous vehicles. I know humans arent the best of drivers but AVs? We developed a method to stabilise traffic flow no matter what perturbations are caused by humans :)
 								</p>
 							</div>
 						</div>
@@ -45,9 +45,14 @@ In the future we know autonomous vehicles will be ubiquitous, we wanted to explo
 							<article id="full">
 								
 								
-								<p>In the future we know autonomous vehicles will be ubiquitous, we wanted to explore if autonomous vehicles can be used as control centers in a mixed traffic with both human driven and autonomous vehicles. I know humans arent the best of drivers but AVs? We developed a method to stabilise traffic flow no matter what perturbations are caused by human idiosyncrasies :)
+								<p>In the future we know autonomous vehicles will be ubiquitous, we wanted to explore if autonomous vehicles can be used as control centers in a mixed traffic with both human driven and autonomous vehicles. I know humans arent the best of drivers but AVs? We developed a method to stabilise traffic flow no matter what perturbations are caused by humans :)</p>
 
-Benchmark is the ring road experiment which is considered the ideal scenario with single lane, no traffic lights, no stop signs. Kind of not a very ideal scenario but then you know things move from ideal to practical.
+<p>Benchmark is the ring road experiment which is considered the ideal scenario with single lane, no traffic lights, no stop signs. Kind of not a very ideal scenario but then you know things move from ideal to practical. We use infinite loop as an optimum vehicle model (OVM). The autnomous vehicle controls for equilibrium vehicle and spacing between different human vehicles</p>
+<p>The emergence of connected and autonomous vehicles (CAVs) has provided new opportunities for smoothing traffic flow</p>
+The model works as a funciton of spacing between position between vehicles, rate of change between spacing and velocity of the autonomou svehicle
+
+
+
 
 
 								
@@ -55,6 +60,7 @@ Benchmark is the ring road experiment which is considered the ideal scenario wit
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/16_1.png" alt="" /></span>
 									
 								</figure>
+								Conected cruise control in traffic flow. The traffic has one autonmous vehicle and human driven vehicles.
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/16_2.png" alt="" /></span>
 									
@@ -63,13 +69,26 @@ Benchmark is the ring road experiment which is considered the ideal scenario wit
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/16_3.png" alt="" /></span>
 								
 								</figure>
+								Results of the experiments showing spacing between vehicles in time with perturbations caused by humans and adjustments over time. Other methods are conservative. They lead to large spacing, which may cause other vehicle to cut-in.
 								<figure>
-									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/16_4.png" alt="" /></span>
-									<figcaption>
-										The results of experiments showing perturbations and its adjustment over time
-									</figcaption>
-									
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/equilibrium.png" alt="" /></span>
+									</figure>
+									Equilibrium velocity vs equilibrium spacing 
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/Closed_ring.png" alt="" /></span>
+									</figure>
+									Sparsity structure appears in many places of real cyberphysical systems and here is a sparsitydynamics data.
+									<figure>
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/visual_repo.png" alt="" /></span>
+									</figure>
+									<figure>
+										 
+									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/av_control.png" alt="" /></span>
 								</figure>
+									<p> Our strategy allows the CAVs to eliminate velocity overshoot, improve fuel economy, and constrain the spacing among the safe range contributing to smoother traffic flow with safety guarantees. This allows for AVs to act as traffic cops controlling speed.</p>
+								<p>Traffic simulations have shown the significant improvement of our strategy in traffic efficiency and fuel economy, with safety guarantee. Some interesting future directions include incorporating delayed trajectory data caused from communication delay, exploring the scalability of DeeP-LCC for large-scale mixed traffic, and addressing the problem of time-varying equilibrium traffic states.</p>
+								<p>A good future application is what if I use sparse matrices to control swarm drones with a control node used by one execultive and the rest adjusting themselves with the Function of spacings in 3 dimension.</p>
+									
 								
 									
 								</article>
