@@ -21,7 +21,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Neural style transfer on music</h1>
-								<p>TInspired by the success of neural transfers on art the first thing my mind thought was this is superb! Now I am going to make AI learn music. I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and it is simple 
+								<p>Inspired by the success of neural transfers on art the first thing that crossed my mind, was this is superb! Now er are going to make AI learn music. Can it be made t learn that? I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and play all my favoruite songs.
 
 All it requires is a little tuning with librosa</p>
 							</div>
@@ -43,20 +43,26 @@ All it requires is a little tuning with librosa</p>
 							<article id="full">
 								
 								
-								<p>Inspired by the success of neural transfers on art the first thing my mind thought was this is superb! Now I am going to make AI learn music. I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and it is simple 
+								<p>Inspired by the success of neural transfers on art the first thing that crossed my mind, was this is superb! Now er are going to make AI learn music. Can it be made t learn that? I learnt harmonium when I was small but could not find time to learn the flute. Well, if I can't learn it there is no issue, I could also make AI learn it and play all my favoruite songs.
 
 All it requires is a little tuning with librosa</p>
+<p>How can one make it follow the tune? what are the parameters to be learnt? What to apply descent on?</p>
+<p> Its the spectrum that needs to be learnt, how can that be done? Its simple we need to convert this one dmensional sequence to a 2d one, like an image and then apply neural transfer techniques</p>
+<p>How can that be done? USing fourier transforms to ocnvert a 1d seignal to 2d one and then apply convolutional neural networks</p>
+
 								<iframe width="420" height="315"src="https://www.youtube.com/embed/s0vhgErpAhU">
 									
 								</iframe>
 														
-								<p>Here is the sherlock theme song (copyrights with BBC) playing and AI in the background trying to learn to play flute using tensorflow. The computing power provided was lower and even on GPU training for 2 days, we could not make deep learning crystal clear. So the best thing it captures is an essence of the song where it learns with the pauses, though there is a lag!</p>
+								<p>Here is the sherlock theme song (copyrights with BBC) playing and AI in the background trying to learn to play flute using tensorflow. The computing power provided was lower and even on GPU training for 2 days, we could not make deep learning crystal clear. So the best thing it captures is an essence of the song, with little pauses in the middle and a follow along tune to accompany!</p>
 								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_1.png" alt="" /></span>
 								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_2.png" alt="" /></span>
 								<span class="image main" style="width:33.33%;height:128px;float:left;"><img src="images_2/2_3.png" alt="" /></span>
-								<p>Librosa can read those spectrums and generate those plots, our job is simply to minimise errors generated and make the neural network learn, by passing the original sound through filters. The net is a relu activated 2d convolution neural network where loss is minimised using weights attached to both the content where the style has to be transferred and the style that has to be learnt, in this case a flute. The weighted sample can then be normalized with the number of samples. 
 
-Playing around with weights can help in better tuning and adding more filters may help increase in better audio quality too.</p>
+								<p>Librosa can read those spectrums and generate tuning plots for the songs and the music style to be transferred, our job is simply to minimise errors generated and make the neural network learn, by passing the original sound through filters. The net is a relu activated 2d convolution neural network where loss is minimised using weights attached to both the content where the style has to be transferred and the style that has to be learnt, in this case a flute. The weighted sample can then be normalized with the number of samples. 
+
+Playing around with weights can help in better tuning and adding more filters may help increase its audio quality too.</p>
+<p>What are the next steps? To make my favourite singers sing my lyrics? How can that be done usinga  NLP generator to write new lyrics for me and then using style transfer to transfer my singer's singing style!</p>
 								</article>
 
 						<!-- Contact -->
