@@ -22,7 +22,7 @@
 							<div class="inner">
 								<h1>Gall stones classification</h1>
 								<p>
-Ultrasound has been usually used to diagnose the gallbladder stone. For classification data is collected from different laboratories. The data is alienated into input and target data. Target data has two values 1 and 2. 1 will show the effected patients and 2 will show the healthy patients. The purpose being simple, identify gall stones in ultrasound images. Why? Well someone in the family had it, I thought lets give it a small try and see if we can do it with reasonable accuracy!!
+									Ultrasound has been usually used to diagnose the gallbladder stone. For classification data is collected from different laboratories. We use data to firt apply boundary detection and detect gall bladder area from the ultrasound of a liver using PCNN. LVQ NN is further used to classify gall bladders into different types. 
 								</p>
 							</div>
 						</div>
@@ -43,29 +43,41 @@ Ultrasound has been usually used to diagnose the gallbladder stone. For classifi
 							<article id="full">
 								
 								
-								<p>Ultrasound has been usually used to diagnose the gallbladder stone. For classification data is collected from different laboratories. The data is alienated into input and target data. Target data has two values 1 and 2. 1 will show the effected patients and 2 will show the healthy patients. The purpose being simple, identify gall stones in ultrasound images. Why? Well someone in the family had it, I thought lets give it a small try and see if we can do it with reasonable accuracy!!
+								<p>Ultrasound has been usually used to diagnose the gallbladder stone. For classification data is collected from different laboratories. The data is alienated into input and target data. Target data has two values 1 and 2. 1 will show the effected patients and 2 will show the healthy patients. The purpose being simple, identify gall stones in ultrasound images. 
+
+								To develop a method for systematic classification of gallbladder stones, analyze the clinical characteristics of each type of stone and provide a theoretical basis for the study of the formation mechanism of different types of gallbladder stones. A total of 807 consecutive patients with gallbladder stones were enrolled and their gallstones were studied.
+							</p>
 
 								
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/12_1.png" alt="" /></span>
-									<figcaption>Raw patient data</figcaption>
+									<figcaption>Sample raw patient data, and their composition of bile stones</figcaption>
 								</figure>
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/12_2.png" alt="" /></span>
-									<figcaption>Geometrical analysis of a gallbladder</figcaption>
+									<figcaption>Geometrical analysis of a gallbladder, boundary detection</figcaption>
 								</figure>
 								<figure>
-									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/12_3.png" alt="" /></span>
-									<figcaption>Simplified GAN architecture</figcaption>
+								<img src="images/gall.gif" alt="" />
+								<figcaption>
+									The wall of normal gallbladderwith clearly boundary is thin and glossy, also a clear outline of halo is presented. The length of gallbladder is no more than 9cm in ultrasonic measurement.
+									In the sonograms, gallstones have a clear acoustic shadow in the rear of the strong echo- ray group, presenting one or more echo shadow. The strong echoes can be regarded as two types, depending on the different types of stones, the acoustic and bile characteristics, i.e. ‘new moon’ and ‘full moon’.
+									PCNN (Pulse Coupled neural networks) model is the simulation of visual behavior, it is the fundamental theory of the segmentation of the PCNN that each pixel is correctly assigned to the region it belongs to, when all the pixels of an input image are fired by PCNN. We use PCNN algorithm to segment the original ultrasonic image and one area of the image is obtained after iteration. Detect this area’s edge, judge whether the current pixel is an edge pixel and mark it in another matrix. Also mark the current area, and place it to another matrix. After several segmentation and region detection, all pixels are detected
+								</figcaption>
 								</figure>
+								
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/12_4.png" alt="" /></span>
 									
 								</figure>
+								All these images should obtain the negative images before using PCNN, owning to the small pixel value will be a much more refined segmentation but the gallstone always presents big pixel value in gallstone ultrasound image.When all the pixels of the input image are fired by PCNN, the small pixel value will be a much more refined segmentation. In gallbladder ultrasound image, the gallstones present big pixel value, so that we obtained the negative of the input images in the above experiment. Learning vector Quantization is a well known algorithm that deals with the problem of selecting prototypes. LVQ NN is a nearest neighbor pattern classifier based on competitive learning. A LVQ NN has a competitive layer and a linear output layer. The linear layer transforms the classes of competitive layer into user defined classifications. The competitive layer learns to classify input vectors. The linear layer transforms the competitive layers’ classes into target classifications
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/12_5.png" alt="" /></span>
 									
 								</figure>
+								<p>
+									The method is excellent, and it is efficient to overcome the drawback of ultrasound image segmentation. Additional, according to the characters of ultrasound images, we consider if it is better to obtain negative images for lately segmentation
+								</p>
 									
 								</article>
 
