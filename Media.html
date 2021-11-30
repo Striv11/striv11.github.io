@@ -22,7 +22,7 @@
 							<div class="inner">
 								<h1>NLP on social media (Ad generator)</h1>
 								<p>
-Can behavioural response to certain ads over a course of time on social media platforms be used to target? How does one get to decipher bahviour from social media data? What is the data to look at?
+									Can behavioural response to certain ads over a course of time on social media platforms be used to target? How does one get to decipher bahviour from social media data? What is the data to look at?
 								</p>
 							</div>
 						</div>
@@ -43,22 +43,16 @@ Can behavioural response to certain ads over a course of time on social media pl
 							<article id="full">
 								
 								
-								<p>Can behavioural response to certain ads over a course of time on social media platforms be used to target? How does one get to decipher bahviour from social media data? What is the data to look at?
+								<p><strong>Can behavioural response to certain ads over a course of time on social media platforms be used to target? How does one get to decipher behaviour from social media data? What is the data to look at? We made a contextual ad generator using NLP.</strong>
 
-We worked with facebook and instagram data and deployed ads on the yahoo-Bing search network to increase click through rates by simple application of AI and NLP on social media ads. If I can understand context, if I can understand the key terms that led to the clicking through we can direct it easily. We worked over millions of data points involving styles and messages and generated daily profits to the tune for 6k USD for the team consistently over two months after being deployed.
+								We worked with facebook and instagram data and deployed ads on the yahoo-Bing search network to increase click through rates by simple application of AI and NLP on social media ads. If I can understand context, if I can understand the key terms that led to the clicking through we can direct it easily. We worked over millions of data points involving styles and messages and generated daily profits to the tune for 6k USD for the team consistently over two months after being deployed.
 
-Being a proprietory project it cannot be displayed here but the general method and approach can be discussed.
+								<b>Being a proprietory project of the company it cannot be displayed here but the general method and approach can be discussed.
+								Some ecamples of ad generated using hte system is shown here</b>
 
-The job is simple, get real time data from facebook and Instagram on a targeted user base and then use that data to target ads to yahoo network. How simple is it, depends on the NLP ( we used NLTk and StanfordCoreNLP  in java or stanza in python). Once relevant behavioural data for the user base is collected (interests, hobbies, dictionary of topics they like, dictionary of places they like, location, words associated with the pages they visit, etc), you get the roi for each of different topics, the last hour what data they liked and the locations they visited, etc. From set of different texts, images and headlines that are available a good ad headline is either picked from the pool or if it is an exclusive and non available topic like designer bags, relevant text from connected topics is collected and using transformers (GPT Neo and GPT J), a good ad text and headline is generated.
+								The job is simple, get real time data from facebook and Instagram on a targeted user base and then use that data to target ads to yahoo network. How simple is it, depends on the NLP ( we used NLTk and StanfordCoreNLP  in java or stanza in python). Once relevant behavioural data for the user base is collected (interests, hobbies, dictionary of topics they like, dictionary of places they like, location, words associated with the pages they visit, etc), you get the roi for each of different topics, the last hour what data they liked and the locations they visited, etc. From set of different texts, images and headlines that are available a good ad headline is either picked from the pool or if it is an exclusive and non available topic like designer bags, relevant text from connected topics is collected and using transformers (GPT Neo and GPT J), a good ad text and headline is generated.
 
-The ad is ten deployed for selected user base and its performance is then monitored per hour after being deployed by getting CTR, and ad impressions data. The ones with less roi or less making are then turned off while those with positive gain per hour remain deployed for the user base on the yahoo network. The user data collected is on a sample set and not for the particular user, and the deployment is on similar users clustered based on those same metrics used to select  the features for the ad (body text, headline and image).
-
-
-
-
-
-Just wait a little I will think of a visual representation that can be generated on the project and its impact and regenerate some of its work :)
-
+								The ad is then deployed for selected user base and its performance is then monitored per hour after being deployed by getting CTR, and ad impressions data. The ones with less roi or less making are then turned off while those with positive gain per hour remain deployed for the user base on the yahoo network. The user data collected is on a sample set and not for the particular user, and the deployment is on similar users clustered based on those same metrics used to select  the features for the ad (body text, headline and image).
 								
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/15_1.png" alt="" /></span>
@@ -66,7 +60,9 @@ Just wait a little I will think of a visual representation that can be generated
 								</figure>
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/15_2.png" alt="" /></span>
-									
+									<figcaption>
+										Stanza representation from Stanford 
+									</figcaption>
 								</figure>
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/15_3.png" alt="" /></span>
@@ -74,7 +70,9 @@ Just wait a little I will think of a visual representation that can be generated
 								</figure>
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/15_4.png" alt="" /></span>
-									<figcaption>We use NLP to recognise sentiment  from the systems the pages they are visiting and assign a score to the number of times user visited them in the past and the one with the highest score  Training the text generator requires 60 GB of download for gpt neo 1.3b. The alternative is using aitextgen from paperspace, this can shorten development time. The other way is to build your own sequential RNN but as soon as we start adding more layers (eg 400 units dense) and train for more epochs, the text generation would become slow and not be real time!!</figcaption>
+									<figcaption>
+										We use NLP to recognise sentiment  from the systems the pages they are visiting and assign a score to the number of times user visited them in the past and the one with the highest score.  Training the text generator requires 60 GB of download for gpt neo 1.3b. The alternative is using ai textgen from paperspace, this can shorten development time. The other way is to build your own sequential RNN but as soon as we start adding more layers (eg 400 units dense) and train for more epochs, the text generation would become slow and not be real time!!
+									</figcaption>
 									
 								</figure>
 								<figure>
@@ -85,7 +83,7 @@ Just wait a little I will think of a visual representation that can be generated
 									
 								</figure>
 								<p>
-									This used to handle millions of data coming in and generate contextual ad on the next day, (little slow). Two contextually generated ad  are represented below. With simple sentences, linked photos with dictionaries , it is easy to get it generated with just dictionaries, it could be take a lot of time in real time with image classifiers.
+									This used to handle millions of data coming in and generate contextual ad on the next day, (little slow). Two contextually generated ad  are represented below. With simple sentences, linked photos with dictionaries (keys: images linked to keywords) , it is easy to get it generated with just dictionaries, it could be take a lot of time in real time with image classifiers.
 								</p>
 								<figure>
 									<span class="image main" style="width:50%;height:100%;float:top;"><img src="images_2/15_6.png" alt="" /></span>
@@ -96,7 +94,7 @@ Just wait a little I will think of a visual representation that can be generated
 									
 								</figure>
 								<p>
-									Generated ads :)
+									Generated ads by the NLP generator based on population level context :) Copyright, nurishingly.com
 								</p>
 									
 								</article>
