@@ -392,16 +392,19 @@
 				</div>
 
 		</div>
-		<a-scene embedded arjs>
-    				<!-- Define a marker -->
-  				<a-marker preset="hiro">
-   				 <!-- Add a 3D box -->
-        				<a-box position="1 0.5 1" material="color: green;"></a-box>
- 				 </a-marker>
- 			 <!-- Add a simple camera -->
-  				<a-entity camera></a-entity>
-		</a-scene>
-
+		 <!-- Container for AR.js scene with Hiro marker -->
+  <div class="ar-container">
+    <a-scene embedded arjs>
+      <!-- Define the Hiro marker -->
+      <a-marker preset="hiro">
+        <!-- Add content to display when Hiro marker is detected -->
+        <!-- For example, add a 3D object -->
+        <a-box position="0 0.5 0" material="color: red;"></a-box>
+      </a-marker>
+      <!-- Add a simple camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
