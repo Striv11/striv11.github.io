@@ -58,15 +58,7 @@
 					</header>
 				</section>
 
-				<a-scene embedded arjs>
-    				<!-- Define a marker -->
-  				<a-marker preset="hiro" size=1>
-   				 <!-- Add a 3D box -->
-        			<a-entity gltf-model="url(augment/scene.gltf)" scale="0.5 0.5 0.5"></a-entity>
- 				 </a-marker>
- 			 <!-- Add a simple camera -->
-  				<a-entity camera></a-entity>
-  				</a-scene>
+				
 
 			<!-- Carousel -->
 				<section class="carousel">
@@ -400,6 +392,15 @@
 				</div>
 
 		</div>
+		<a-scene embedded arjs>
+    				<!-- Define a marker -->
+  				<a-marker preset="hiro" size=1>
+   				 <!-- Add a 3D box -->
+        				<a-entity gltf-model="url(augment/scene.gltf)" scale="0.5 0.5 0.5"></a-entity>
+ 				 </a-marker>
+ 			 <!-- Add a simple camera -->
+  				<a-entity camera></a-entity>
+		</a-scene>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
